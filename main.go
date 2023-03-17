@@ -9,7 +9,7 @@ import (
 func main() {
 	var err error
 	var menu int
-	// var NoHp string
+
 	config.Connect()
 	db := config.GetConnection()
 
@@ -28,12 +28,12 @@ func main() {
 				return
 			}
 		case 2:
-			// if noHp == "" {
-			// 	fmt.Println("Silahkan Login Dude!")
-			// 	if noHp, err = user.Login(db); err != nil {
-			// 		pilihan = 0
-			// 		return
-			// 	}
+			if noHp == "" {
+				fmt.Println("Silahkan Login Dude!")
+				if noHp, err = user.Login(db); err != nil {
+					pilihan = 0
+					return
+				}
 
 			// // case 0:
 			// // 	fmt.Println("Terima kasih telah menggunakan aplikasi ini")
