@@ -35,13 +35,13 @@ func main() {
 					return
 				}
 
-			// // case 0:
-			// // 	fmt.Println("Terima kasih telah menggunakan aplikasi ini")
-			// // 	return
-			// default:
-			// 	fmt.Println("Menu yang Anda pilih tidak tersedia, silahkan coba lagi")
+				// // case 0:
+				// // 	fmt.Println("Terima kasih telah menggunakan aplikasi ini")
+				// // 	return
+				// default:
+				// 	fmt.Println("Menu yang Anda pilih tidak tersedia, silahkan coba lagi")
+			}
 		}
 	}
-}
 
-// }
+}
