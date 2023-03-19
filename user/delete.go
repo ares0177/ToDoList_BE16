@@ -12,7 +12,7 @@ func Delete(db *sql.DB, NoHp string) (err error) {
 	fmt.Scanln(&konfirmasi)
 
 	if konfirmasi != "Y" {
-		fmt.Println("Tidak jadi menghapus akun Dude")
+		fmt.Println("Tidak jadi menghapus akun")
 		return err
 	}
 
