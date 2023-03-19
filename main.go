@@ -61,6 +61,11 @@ func main() {
 			if err = user.Update(db, NoHp); err != nil {
 				return
 			}
+		case 2:
+			if err = user.Delete(db, NoHp); err != nil {
+				return
+			}
+			menu = 0
 		}
 	}
 
