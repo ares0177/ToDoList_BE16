@@ -8,22 +8,22 @@ import (
 func Login(db *sql.DB) (noHp string, err error) {
 	var PasswordUser string
 	var NoHpUser string
-	fmt.Println("Masukkan nomor Telepon anda Dude! :")
+	fmt.Println("Masukkan nomor Telepon anda :")
 	fmt.Scanln(&NoHpUser)
-	fmt.Println("Masukkan Password anda Dude! :")
+	fmt.Println("Masukkan Password anda :")
 	fmt.Scanln(&PasswordUser)
 
 	var user User
 	err = db.
-		QueryRow("SELECT id, name, no_hp FROM user WHERE no_hp = ? and password = ?",
+		QueryRow("SELECT user_id, name, phone_number FROM user WHERE phone_number = ? and password = ?",
 			NoHpUser, PasswordUser).
 		Scan(&user.User_ID, &user.Nama, &user.Phone)
 	if err != nil {
-		fmt.Println("Waduh. Kata sandi anda salah nih Dude! coba periksa kembali ya Dude!")
+		fmt.Println("Yang anda masukkan salah. Mohon coba lagi")
 		return "", err
 	}
 
-	fmt.Println("Yeay keren. Anda berhasil masuk Dude!")
+	fmt.Println("Yeay keren. Anda berhasil masuk!")
 	fmt.Printf("No Handphone : %s\nNama : %s\n", user.Phone, user.Nama)
 
 	return user.Phone, nil
